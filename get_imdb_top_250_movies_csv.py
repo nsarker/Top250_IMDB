@@ -17,7 +17,7 @@ def write_movies2(filename: str = "IMDb_Top_250_Movies_v2.csv") -> None:
         writer = csv.writer(out_file)
         writer.writerow(["Movie title","Movie title with year", "Year","IMDb rating", "movieid"])
         for title, rating, year, movieid in zip(titles,ratings,years,movieids):
-            writer.writerow([title.a.text, title.a.text+" " + year.text, year.text[:-1][1:], rating.strong.text, movieid.div['data-tconst']])
+            writer.writerow([title.a.text, title.a.text + " " + year.text, year.text[:-1][1:], rating.strong.text, movieid.div['data-tconst']])
 
 
 if __name__ == "__main__":
